@@ -3,100 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgentGuard — The Execution Control Layer for AI Agents</title>
-    <meta name="description" content="Intercept, evaluate, and control every action your AI agents take — before it's too late.">
+    <title>AgentGuard — Mission-Critical Execution Control for AI Agents</title>
+    <meta name="description" content="The trusted execution control layer for production AI agents. Intercept, evaluate, and govern every action — before it runs.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 40%, #0d0d2b 100%); }
-        .glow { box-shadow: 0 0 40px rgba(99, 102, 241, 0.15); }
-        .glow-btn { box-shadow: 0 0 20px rgba(99, 102, 241, 0.4); }
-        .glow-btn:hover { box-shadow: 0 0 30px rgba(99, 102, 241, 0.6); }
-        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 0 30px rgba(99, 102, 241, 0.2); }
+        .gradient-bg { background: linear-gradient(135deg, #0a0a1a 0%, #111133 40%, #080820 100%); }
+        .glow { box-shadow: 0 0 40px rgba(99, 102, 241, 0.12); }
+        .glow-btn { box-shadow: 0 0 20px rgba(99, 102, 241, 0.35); }
+        .glow-btn:hover { box-shadow: 0 0 30px rgba(99, 102, 241, 0.5); }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 0 30px rgba(99, 102, 241, 0.15); }
         .pulse { animation: pulse 2s infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
-        .code-block { background: rgba(0,0,0,0.4); border: 1px solid rgba(99,102,241,0.2); }
-        .grid-bg { background-image: radial-gradient(rgba(99,102,241,0.08) 1px, transparent 1px); background-size: 30px 30px; }
+        .code-block { background: rgba(0,0,0,0.5); border: 1px solid rgba(99,102,241,0.15); }
+        .grid-bg { background-image: radial-gradient(rgba(99,102,241,0.06) 1px, transparent 1px); background-size: 30px 30px; }
+        .gold-accent { color: #d4a853; }
     </style>
 </head>
 <body class="gradient-bg text-white min-h-screen">
 
-    <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-black/30 border-b border-white/5">
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/5">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-indigo-500 rounded-lg flex items-center justify-center font-bold text-sm">AG</div>
-                <span class="font-bold text-lg">AgentGuard</span>
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-sm">AG</div>
+                <span class="font-bold text-lg tracking-tight">AgentGuard</span>
+                <span class="text-xs text-gray-500 hidden sm:inline border border-white/10 px-2 py-0.5 rounded">EARLY ACCESS</span>
             </div>
-            <a href="#waitlist" class="text-sm text-indigo-400 hover:text-indigo-300 transition">Join Waitlist →</a>
+            <a href="#request" class="text-sm text-indigo-400 hover:text-indigo-300 transition">Request Access →</a>
         </div>
     </nav>
 
     <section class="grid-bg min-h-screen flex items-center justify-center pt-20">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-sm mb-8">
-                <span class="w-2 h-2 bg-green-400 rounded-full pulse"></span>
-                Pre-launch — Join the waitlist
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-indigo-500/20 bg-indigo-500/5 text-indigo-300 text-sm mb-8">
+                <span class="w-2 h-2 bg-indigo-400 rounded-full pulse"></span>
+                By invitation — limited early access
             </div>
 
             <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6">
-                Your AI agents can act.<br>
-                <span class="text-indigo-400">Who's checking if they should?</span>
+                Production agents<br>need production control.
             </h1>
 
             <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                AgentGuard intercepts every action your AI agents propose — evaluates risk, enforces policy, and escalates to humans when it matters. Before the action runs. Not after.
+                AgentGuard is the execution governance layer built for teams shipping AI agents at scale. Every action is intercepted, evaluated, and governed — before it runs.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                <a href="#waitlist" class="glow-btn bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-4 rounded-xl text-lg transition">
-                    Get Early Access
+                <a href="#request" class="glow-btn bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-4 rounded-xl text-lg transition">
+                    Request Private Access
                 </a>
-                <a href="#how-it-works" class="border border-white/20 hover:border-white/40 text-white font-semibold px-8 py-4 rounded-xl text-lg transition">
-                    See How It Works
+                <a href="#how-it-works" class="border border-white/15 hover:border-white/30 text-white font-semibold px-8 py-4 rounded-xl text-lg transition">
+                    See the Architecture
                 </a>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-8 text-sm text-gray-500 mb-12">
+                <div class="flex items-center gap-2">
+                    <span class="text-green-400">✓</span> Enterprise-grade audit trail
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-green-400">✓</span> 10ms interception latency
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-green-400">✓</span> Framework-agnostic
+                </div>
             </div>
 
             <div class="code-block rounded-xl p-6 text-left max-w-2xl mx-auto glow">
                 <div class="flex items-center gap-2 mb-4">
-                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                    <span class="text-gray-500 text-sm ml-2">agent-action.log</span>
+                    <div class="w-3 h-3 rounded-full bg-red-500/70"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500/70"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500/70"></div>
+                    <span class="text-gray-600 text-xs ml-2 font-mono">agentguard.log</span>
                 </div>
-                <pre class="text-sm leading-relaxed"><code><span class="text-gray-500">// Agent wants to send an email</span>
+                <pre class="text-sm leading-relaxed font-mono"><code><span class="text-gray-600">// Agent initiates external action</span>
 <span class="text-yellow-400">PROPOSAL:</span> { action: <span class="text-green-400">"send_email"</span>, to: <span class="text-green-400">"client@company.com"</span> }
-<span class="text-blue-400">POLICY CHECK:</span> external_communication → <span class="text-yellow-400">requires_approval</span>
-<span class="text-purple-400">ESCALATED:</span> Waiting for human approval...
-<span class="text-green-400">✓ APPROVED</span> — action executed at 14:32:07</code></pre>
+<span class="text-blue-400">GOVERNANCE:</span> external_communication → <span class="text-yellow-400">escalated</span>
+<span class="text-purple-400">ESCALATED:</span> Awaiting authorized approval...
+<span class="text-green-400">✓ AUTHORIZED</span> — executed at 14:32:07 · audit_id: ag-7f2a</code></pre>
             </div>
         </div>
     </section>
 
     <section class="py-24 px-6">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">The gap nobody talks about</h2>
-            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-16">Most AI agent safety relies on prompts and tool restrictions. Neither is enough.</p>
+            <p class="text-indigo-400 text-sm font-semibold text-center mb-4 tracking-widest uppercase">The Risk</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Prompts are not a safety system.</h2>
+            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-16">Production agents need production-grade control. Here's why current approaches fall short.</p>
 
             <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white/5 border border-white/10 rounded-xl p-8 card-hover transition-all duration-300">
+                <div class="bg-white/[0.03] border border-white/10 rounded-xl p-8 card-hover transition-all duration-300">
                     <div class="text-3xl mb-4">💬</div>
-                    <h3 class="font-bold text-lg mb-2">Prompt Engineering</h3>
-                    <p class="text-gray-400 text-sm">"Don't do X" — just asking nicely. Breaks when context shifts, prompts leak, or the agent gets creative.</p>
-                    <div class="mt-4 text-red-400 text-sm font-semibold">❌ Fragile</div>
+                    <h3 class="font-bold text-lg mb-2">Prompt-Based Guardrails</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Instructing an agent "don't do X" is a suggestion, not a control. Breaks under context drift, adversarial input, and creative interpretation.</p>
+                    <div class="mt-4 text-red-400/80 text-sm font-semibold">Not production-grade</div>
                 </div>
-                <div class="bg-white/5 border border-white/10 rounded-xl p-8 card-hover transition-all duration-300">
+                <div class="bg-white/[0.03] border border-white/10 rounded-xl p-8 card-hover transition-all duration-300">
                     <div class="text-3xl mb-4">🔒</div>
-                    <h3 class="font-bold text-lg mb-2">Tool Restrictions</h3>
-                    <p class="text-gray-400 text-sm">Limit which tools exist. All-or-nothing. Either the agent can send emails or it can't — no middle ground.</p>
-                    <div class="mt-4 text-red-400 text-sm font-semibold">❌ Binary</div>
+                    <h3 class="font-bold text-lg mb-2">Binary Tool Restrictions</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Removing tools is all-or-nothing. Either an agent can communicate externally or it can't. No nuance. No context-aware decisions.</p>
+                    <div class="mt-4 text-red-400/80 text-sm font-semibold">Not sufficient</div>
                 </div>
-                <div class="bg-indigo-500/10 border border-indigo-500/30 rounded-xl p-8 card-hover transition-all duration-300">
+                <div class="bg-indigo-500/[0.06] border border-indigo-500/20 rounded-xl p-8 card-hover transition-all duration-300">
                     <div class="text-3xl mb-4">🛡️</div>
                     <h3 class="font-bold text-lg mb-2">AgentGuard</h3>
-                    <p class="text-gray-400 text-sm">A control layer between "agent decides to act" and "action executes." Risk scoring, policies, and human escalation.</p>
-                    <div class="mt-4 text-green-400 text-sm font-semibold">✅ Explicit Control</div>
+                    <p class="text-gray-400 text-sm leading-relaxed">An explicit governance layer — purpose-built for production agents. Structured proposals, policy-driven evaluation, human authorization, and complete audit trails.</p>
+                    <div class="mt-4 text-indigo-400 text-sm font-semibold">Built for production</div>
                 </div>
             </div>
         </div>
@@ -104,38 +118,39 @@
 
     <section id="how-it-works" class="py-24 px-6 border-t border-white/5">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">How it works</h2>
-            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-16">Three layers between your agent and disaster.</p>
+            <p class="text-indigo-400 text-sm font-semibold text-center mb-4 tracking-widest uppercase">The Architecture</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Governance by design, not by hope.</h2>
+            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-16">Three deliberate layers between your agent and execution.</p>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-indigo-500/20 border border-indigo-500/30 rounded-2xl flex items-center justify-center text-2xl font-bold text-indigo-400 mx-auto mb-6">1</div>
-                    <h3 class="font-bold text-xl mb-3">Agent Proposes</h3>
-                    <p class="text-gray-400">Instead of executing directly, your agent emits a structured action proposal with context, target, and intent.</p>
+                    <div class="w-16 h-16 bg-indigo-500/10 border border-indigo-500/20 rounded-2xl flex items-center justify-center text-2xl font-bold text-indigo-400 mx-auto mb-6">1</div>
+                    <h3 class="font-bold text-xl mb-3">Structured Proposal</h3>
+                    <p class="text-gray-400 leading-relaxed">Agents emit a formal action proposal — structured intent, target, context, and predicted impact. No direct execution.</p>
                 </div>
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-indigo-500/20 border border-indigo-500/30 rounded-2xl flex items-center justify-center text-2xl font-bold text-indigo-400 mx-auto mb-6">2</div>
-                    <h3 class="font-bold text-xl mb-3">Guard Evaluates</h3>
-                    <p class="text-gray-400">Policy engine checks rules, risk scorer classifies the action, and decides: auto-approve, auto-deny, or escalate.</p>
+                    <div class="w-16 h-16 bg-indigo-500/10 border border-indigo-500/20 rounded-2xl flex items-center justify-center text-2xl font-bold text-indigo-400 mx-auto mb-6">2</div>
+                    <h3 class="font-bold text-xl mb-3">Governance Evaluation</h3>
+                    <p class="text-gray-400 leading-relaxed">Policy engine applies your rules. Risk scorer classifies the action. The system decides: authorize, deny, or escalate for human review.</p>
                 </div>
                 <div class="text-center">
-                    <div class="w-16 h-16 bg-indigo-500/20 border border-indigo-500/30 rounded-2xl flex items-center justify-center text-2xl font-bold text-indigo-400 mx-auto mb-6">3</div>
-                    <h3 class="font-bold text-xl mb-3">Action Executes</h3>
-                    <p class="text-gray-400">Approved actions run. Denied actions are logged. Escalated actions pause until a human decides. Full audit trail.</p>
+                    <div class="w-16 h-16 bg-indigo-500/10 border border-indigo-500/20 rounded-2xl flex items-center justify-center text-2xl font-bold text-indigo-400 mx-auto mb-6">3</div>
+                    <h3 class="font-bold text-xl mb-3">Controlled Execution</h3>
+                    <p class="text-gray-400 leading-relaxed">Authorized actions execute. Denied actions are documented. Escalated actions pause until an authorized human decides. Full audit trail.</p>
                 </div>
             </div>
 
             <div class="mt-16 flex flex-wrap justify-center items-center gap-4 text-sm">
-                <div class="bg-yellow-500/10 border border-yellow-500/30 text-yellow-300 px-4 py-2 rounded-lg">Agent Action</div>
-                <span class="text-gray-500">→</span>
-                <div class="bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 px-4 py-2 rounded-lg">AgentGuard Intercepts</div>
-                <span class="text-gray-500">→</span>
-                <div class="bg-blue-500/10 border border-blue-500/30 text-blue-300 px-4 py-2 rounded-lg">Policy Check</div>
-                <span class="text-gray-500">→</span>
+                <div class="bg-white/[0.03] border border-white/10 text-gray-300 px-4 py-2 rounded-lg">Agent Proposal</div>
+                <span class="text-gray-600">→</span>
+                <div class="bg-indigo-500/[0.06] border border-indigo-500/20 text-indigo-300 px-4 py-2 rounded-lg">AgentGuard Intercepts</div>
+                <span class="text-gray-600">→</span>
+                <div class="bg-white/[0.03] border border-white/10 text-gray-300 px-4 py-2 rounded-lg">Governance Check</div>
+                <span class="text-gray-600">→</span>
                 <div class="flex gap-2">
-                    <div class="bg-green-500/10 border border-green-500/30 text-green-300 px-3 py-2 rounded-lg">✓ Allow</div>
-                    <div class="bg-red-500/10 border border-red-500/30 text-red-300 px-3 py-2 rounded-lg">✗ Deny</div>
-                    <div class="bg-purple-500/10 border border-purple-500/30 text-purple-300 px-3 py-2 rounded-lg">↑ Escalate</div>
+                    <div class="bg-green-500/[0.06] border border-green-500/20 text-green-300 px-3 py-2 rounded-lg">Authorize</div>
+                    <div class="bg-red-500/[0.06] border border-red-500/20 text-red-300 px-3 py-2 rounded-lg">Deny</div>
+                    <div class="bg-purple-500/[0.06] border border-purple-500/20 text-purple-300 px-3 py-2 rounded-lg">Escalate</div>
                 </div>
             </div>
         </div>
@@ -143,49 +158,50 @@
 
     <section class="py-24 px-6 border-t border-white/5">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Everything you need to ship agents safely</h2>
+            <p class="text-indigo-400 text-sm font-semibold text-center mb-4 tracking-widest uppercase">Capabilities</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Purpose-built for production environments.</h2>
 
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex gap-4 card-hover transition-all duration-300">
+                <div class="bg-white/[0.03] border border-white/10 rounded-xl p-6 flex gap-4 card-hover transition-all duration-300">
                     <div class="text-2xl">📋</div>
                     <div>
                         <h3 class="font-bold mb-1">Policy Engine</h3>
-                        <p class="text-gray-400 text-sm">Define rules in simple YAML — auto-approve reads, deny production deletes, escalate external emails.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">Tailored governance rules in YAML or JSON. Define precisely what agents can and cannot do — with context-aware nuance, not binary restrictions.</p>
                     </div>
                 </div>
-                <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex gap-4 card-hover transition-all duration-300">
+                <div class="bg-white/[0.03] border border-white/10 rounded-xl p-6 flex gap-4 card-hover transition-all duration-300">
                     <div class="text-2xl">⚡</div>
                     <div>
-                        <h3 class="font-bold mb-1">Risk Scoring</h3>
-                        <p class="text-gray-400 text-sm">Every action gets a risk classification — low, medium, high — based on impact, target, and context.</p>
+                        <h3 class="font-bold mb-1">Intelligent Risk Scoring</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Every action receives an automated risk classification — low, medium, high — evaluated across impact type, target sensitivity, and organizational context.</p>
                     </div>
                 </div>
-                <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex gap-4 card-hover transition-all duration-300">
+                <div class="bg-white/[0.03] border border-white/10 rounded-xl p-6 flex gap-4 card-hover transition-all duration-300">
                     <div class="text-2xl">🔔</div>
                     <div>
-                        <h3 class="font-bold mb-1">Human Escalation</h3>
-                        <p class="text-gray-400 text-sm">Medium/high-risk actions pause and ping you via Slack, Discord, or email. One-click approve or deny.</p>
+                        <h3 class="font-bold mb-1">Human Authorization</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Elevated-risk actions pause for human review. Notifications delivered via Slack, Discord, or email. One-click authorization. Complete accountability.</p>
                     </div>
                 </div>
-                <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex gap-4 card-hover transition-all duration-300">
+                <div class="bg-white/[0.03] border border-white/10 rounded-xl p-6 flex gap-4 card-hover transition-all duration-300">
                     <div class="text-2xl">📊</div>
                     <div>
-                        <h3 class="font-bold mb-1">Audit Log</h3>
-                        <p class="text-gray-400 text-sm">Every action ever proposed, approved, or denied — full trail for compliance and debugging.</p>
+                        <h3 class="font-bold mb-1">Compliance-Grade Audit Trail</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">Every proposed action — approved, denied, or escalated — documented with timestamps, context, and decision rationale. Built for SOC2 and HIPAA.</p>
                     </div>
                 </div>
-                <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex gap-4 card-hover transition-all duration-300">
+                <div class="bg-white/[0.03] border border-white/10 rounded-xl p-6 flex gap-4 card-hover transition-all duration-300">
                     <div class="text-2xl">🔌</div>
                     <div>
-                        <h3 class="font-bold mb-1">Simple API</h3>
-                        <p class="text-gray-400 text-sm">One POST request to intercept any action. Works with LangChain, CrewAI, AutoGPT, or custom agents.</p>
+                        <h3 class="font-bold mb-1">Framework-Agnostic API</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">A single endpoint to govern any agent action. Proven compatibility with LangChain, CrewAI, AutoGPT, OpenClaw, and custom architectures.</p>
                     </div>
                 </div>
-                <div class="bg-white/5 border border-white/10 rounded-xl p-6 flex gap-4 card-hover transition-all duration-300">
+                <div class="bg-white/[0.03] border border-white/10 rounded-xl p-6 flex gap-4 card-hover transition-all duration-300">
                     <div class="text-2xl">⏱️</div>
                     <div>
-                        <h3 class="font-bold mb-1">Timeout Auto-Deny</h3>
-                        <p class="text-gray-400 text-sm">No human response in time? Action auto-denies. Safe by default, not sorry after the fact.</p>
+                        <h3 class="font-bold mb-1">Fail-Safe Timeouts</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">No authorization within the configured window? Action is automatically denied. Engineered for safety-first operation, not forgiveness after failure.</p>
                     </div>
                 </div>
             </div>
@@ -194,52 +210,55 @@
 
     <section class="py-24 px-6 border-t border-white/5">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Simple pricing</h2>
-            <p class="text-gray-400 text-center mb-16">Start free. Scale when you're ready.</p>
+            <p class="text-indigo-400 text-sm font-semibold text-center mb-4 tracking-widest uppercase">Plans</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Select your tier.</h2>
+            <p class="text-gray-400 text-center mb-16">Scale when the time is right.</p>
 
             <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white/5 border border-white/10 rounded-xl p-8 card-hover transition-all duration-300">
-                    <h3 class="font-bold text-lg mb-1">Free</h3>
+                <div class="bg-white/[0.03] border border-white/10 rounded-xl p-8 card-hover transition-all duration-300">
+                    <h3 class="font-bold text-lg mb-1 text-gray-300">Starter</h3>
                     <div class="text-3xl font-black mb-4">$0<span class="text-lg text-gray-500 font-normal">/mo</span></div>
                     <ul class="text-sm text-gray-400 space-y-3">
-                        <li>✓ Basic policy engine</li>
-                        <li>✓ 100 actions/day</li>
+                        <li>✓ Core policy engine</li>
+                        <li>✓ 100 governed actions/day</li>
                         <li>✓ Email notifications</li>
-                        <li>✗ Slack/Discord integration</li>
+                        <li>✗ Slack / Discord integration</li>
                         <li>✗ Audit log exports</li>
                     </ul>
                 </div>
-                <div class="bg-indigo-500/10 border border-indigo-500/30 rounded-xl p-8 relative glow card-hover transition-all duration-300">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-indigo-600 text-xs font-bold px-3 py-1 rounded-full">POPULAR</div>
+                <div class="bg-indigo-500/[0.06] border border-indigo-500/25 rounded-xl p-8 relative glow card-hover transition-all duration-300">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-indigo-600 text-xs font-bold px-3 py-1 rounded-full">RECOMMENDED</div>
                     <h3 class="font-bold text-lg mb-1">Pro</h3>
                     <div class="text-3xl font-black mb-4">$29<span class="text-lg text-gray-500 font-normal">/mo</span></div>
                     <ul class="text-sm text-gray-400 space-y-3">
-                        <li>✓ Unlimited actions</li>
-                        <li>✓ Custom policies</li>
+                        <li>✓ Unlimited governed actions</li>
+                        <li>✓ Tailored policy configuration</li>
                         <li>✓ Slack + Discord integration</li>
-                        <li>✓ Full audit log</li>
-                        <li>✓ Risk scoring</li>
+                        <li>✓ Complete audit trail</li>
+                        <li>✓ Intelligent risk scoring</li>
                     </ul>
                 </div>
-                <div class="bg-white/5 border border-white/10 rounded-xl p-8 card-hover transition-all duration-300">
-                    <h3 class="font-bold text-lg mb-1">Enterprise</h3>
-                    <div class="text-3xl font-black mb-4">$199<span class="text-lg text-gray-500 font-normal">/mo</span></div>
+                <div class="bg-white/[0.03] border border-white/10 rounded-xl p-8 card-hover transition-all duration-300">
+                    <div class="gold-accent text-xs font-bold tracking-widest uppercase mb-2">Enterprise</div>
+                    <h3 class="font-bold text-lg mb-1">$199<span class="text-lg text-gray-500 font-normal">/mo</span></h3>
+                    <div class="text-xs text-gray-500 mb-4">Custom pricing available</div>
                     <ul class="text-sm text-gray-400 space-y-3">
                         <li>✓ Everything in Pro</li>
-                        <li>✓ Team dashboard</li>
-                        <li>✓ SSO + role-based access</li>
-                        <li>✓ Compliance reports</li>
-                        <li>✓ Priority support</li>
+                        <li>✓ Team governance dashboard</li>
+                        <li>✓ SSO + role-based authorization</li>
+                        <li>✓ Compliance report generation</li>
+                        <li>✓ Dedicated support</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="waitlist" class="py-24 px-6 border-t border-white/5">
+    <section id="request" class="py-24 px-6 border-t border-white/5">
         <div class="max-w-2xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Get early access</h2>
-            <p class="text-gray-400 mb-10">Join the waitlist. Be first to ship agents with a safety net.</p>
+            <p class="text-indigo-400 text-sm font-semibold mb-4 tracking-widest uppercase">Early Access</p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Request private access.</h2>
+            <p class="text-gray-400 mb-10">We're onboarding teams selectively. Submit your request and we'll reach out when it's your turn.</p>
 
             <form id="waitlist-form" class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
                 <input
@@ -247,35 +266,35 @@
                     id="waitlist-email"
                     placeholder="you@company.com"
                     required
-                    class="flex-1 px-5 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition"
+                    class="flex-1 px-5 py-4 rounded-xl bg-white/[0.06] border border-white/15 text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition"
                 >
                 <button
                     type="submit"
                     class="glow-btn bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-8 py-4 rounded-xl transition whitespace-nowrap"
                 >
-                    Join Waitlist
+                    Request Access
                 </button>
             </form>
 
             <div id="success-msg" class="hidden mt-6 text-green-400 font-semibold">
-                ✅ You're on the list. We'll reach out when it's your turn.
+                ✓ Request submitted. We'll be in touch.
             </div>
             <div id="error-msg" class="hidden mt-6 text-red-400 font-semibold">
                 Something went wrong. Try again.
             </div>
 
-            <p class="text-gray-600 text-sm mt-6">No spam. Unsubscribe anytime.</p>
+            <p class="text-gray-600 text-sm mt-6">Selective onboarding. No spam.</p>
         </div>
     </section>
 
     <footer class="border-t border-white/5 py-12 px-6">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-2">
-                <div class="w-6 h-6 bg-indigo-500 rounded flex items-center justify-center font-bold text-xs">AG</div>
-                <span class="font-semibold">AgentGuard</span>
+                <div class="w-6 h-6 bg-indigo-600 rounded flex items-center justify-center font-bold text-xs">AG</div>
+                <span class="font-semibold text-sm">AgentGuard</span>
             </div>
-            <div class="text-gray-500 text-sm">
-                Built by <a href="https://nasirr.innergintel.org" class="text-indigo-400 hover:text-indigo-300 transition">InnerG Intel</a> · <a href="https://www.youtube.com/@innergintel" class="text-indigo-400 hover:text-indigo-300 transition">YouTube</a>
+            <div class="text-gray-600 text-sm">
+                An <a href="https://nasirr.innergintel.org" class="text-indigo-400 hover:text-indigo-300 transition">InnerG Intel</a> product · <a href="https://www.youtube.com/@innergintel" class="text-indigo-400 hover:text-indigo-300 transition">YouTube</a>
             </div>
         </div>
     </footer>
